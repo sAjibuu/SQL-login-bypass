@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# HTTP Brute Force by Sajibu
+# HTTP login page Brute Force with SQL Queries by Sajibu
 
 # Parsing Arguments
 
