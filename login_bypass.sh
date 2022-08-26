@@ -33,7 +33,7 @@ while [[ $# -gt 0 && $# -lt 11 ]]; do
       shift # past value
       ;;
     -h|--help)
-	  echo -e "USAGE:\n-u | --url = Supply the login page, for example: http://192.168.98.200/login.php\n-w | --wordlist = SQL Injection wordlist path\n-r | --request = Request header, for example: 'user=admin&password=123' Must be with single quotes!\n-H | --header (Optional) = Any curl header, for example: 'X-Forwarded-For: 10.10.10.10' Must be with single quotes!\n-e | --error = Error message, example: 'Invalid user or password.' Must be with single quotes!"
+	  echo -e "USAGE:\n-u | --url = Supply the login page, for example: http://192.168.98.200/login.php\n-w | --wordlist = SQL Injection wordlist path\n-r | --request = Request header, for example: 'user=admin&password=123' Must be with single quotes!\n-H | --header (Optional) = Any curl header, for example: 'X-Forwarded-For: 10.10.10.10' Must be with single quotes!\n-e | --error = Error message when credentials is incorrect, example: 'Invalid user or password.' Must be with single quotes!"
       shift # past argument
       exit 1
       ;;
@@ -206,7 +206,7 @@ if [[ "$URL" == '' ]]; then
 
 	if [[ "$ERROR" == '' ]]; then
 
-		echo "[-] Header is not specified, use argument -e or --error."
+		"[-] Header - Incorrect Credentials isn't specified, use -e or --error."
 		
 	fi
 
@@ -227,7 +227,7 @@ if [[ "$LOGIN" == '' ]]; then
 
 	if [[ "$ERROR" == '' ]]; then
 
-		echo "[-] Header is not specified, use -e or --error."
+		echo "[-] Header - Incorrect Credentials isn't specified, use -e or --error."
 
 		
 	fi
@@ -245,7 +245,7 @@ fi
 	
 if [[ "$ERROR" == '' ]]; then
 
-	echo "[-] Header is not specified, use -e or --error."
+	echo "[-] Header - Incorrect Credentials isn't specified, use -e or --error."
 
 	if [[ "$WORDLIST" == '' ]]; then
 
