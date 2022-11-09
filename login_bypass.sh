@@ -43,7 +43,7 @@ while [[ $# -gt 0 && $# -lt 12 ]]; do
       shift # past value
       ;;
     -h|--help)
-	  echo -e "USAGE:\n-u | --url = Supply the login page, for example: http://192.168.98.200/login.php\n-w | --wordlist = SQL Injection wordlist path\n-r | --request = Request body, for example: 'user=admin&password=123' Must be with single quotes!\n-c | --cookie = Set Cookie, for example: 'wordpress_test_cookie=WP%20Cookie%20check'\n-H | --header (Optional) = Any curl header, for example: 'X-Forwarded-For: 10.10.10.10' Must be with single quotes!\n-e | --error = Error message when credentials is incorrect, example: 'Invalid user or password.' Must be with single quotes!\n-s | --ssl = No SSL/TLS check. Example: --ssl true"
+	  echo -e "USAGE:\n-u | --url = Supply the login page, for example: http://192.168.98.200/login.php\n-w | --wordlist = SQL Injection wordlist path\n-r | --request = Request body, for example: 'user=FUZZ&password=123' replace user/pass with FUZZ word!\n-e | --error = Error message when credentials is incorrect, example: 'Invalid user or password.' Must be with single quotes!\n-c | --cookie = Set Cookie, for example: 'wordpress_test_cookie=WP%20Cookie%20check'\n-H | --header = Any header, for example: 'X-Forwarded-For: 10.10.10.10' Must be with single quotes!\n-s | --ssl = No SSL/TLS check. Example: --ssl true"
       shift # past argument
       exit 1
       ;;
