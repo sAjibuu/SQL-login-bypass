@@ -318,7 +318,7 @@ if [[ "$URL" == '' ]]; then
 	if [[ "$WORDLIST" == '' ]]; then
 
 		echo "[-] Path for SQL injection dictionary queries isn't specified, use -w or --wordlist."
-    echo "[-] Please use single quotes and type -h or --help for usage."
+    		echo "[-] Please use single quotes and type -h or --help for usage."
     
     exit
 
