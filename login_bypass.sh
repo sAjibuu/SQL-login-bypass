@@ -3,7 +3,6 @@
 # HTTP login page Brute Force with SQL Queries by Sajibu
 
 # Parsing Arguments
-
 while [ $# -gt 0 ]; do
 
   key="$1"
@@ -69,7 +68,6 @@ while [ $# -gt 0 ]; do
 
 done
 
-echo $@
 # Arguments check
 
 if [[ "$URL" == '' ]]; then
@@ -112,8 +110,6 @@ if [[ "$SSL" != '' ]] && [[ "$SSL" != 'true' ]];then
   exit
 
 fi
-
-
 
 main() {
 
@@ -239,7 +235,6 @@ main() {
     response=$(echo -e $REQUEST > response.txt)
     
   fi
-
 
 }
 
