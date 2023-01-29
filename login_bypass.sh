@@ -116,14 +116,13 @@ main() {
   #Header is set with different arguements check
 
   if [ "$HEADER" != '' ] && [ "$Cookie" == '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
-    
+
     REQUEST=$(curl -D headers.txt $1 -s "${URL}" -H "${HEADER}"  --data-raw "${LOGIN/FUZZ/$wordlist}")
     
     response=$(echo -e $REQUEST > response.txt)
 
-
   elif [ "$HEADER" != '' ] && [ "$Cookie" != '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
-    
+
     REQUEST=$(curl -D headers.txt $1 -s "${URL}" --cookie "${Cookie}" -H "${HEADER}" --data-raw "${LOGIN/FUZZ/$wordlist}")
     
     response=$(echo -e $REQUEST > response.txt)
@@ -194,7 +193,7 @@ main() {
     
   elif [ "$HEADER" == '' ] && [ "$Cookie" != '' ] && [ "$CSRF" == '' ] && [ "$SSL" == 'true' ]; then
     
-    REQUEST=$(curl -D headers.txt -s -k -s "${URL}" --cookie "${Cookie}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")      
+    REQUEST=$(curl -D headers.txt $1 -s -k -s "${URL}" --cookie "${Cookie}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")      
     
     response=$(echo -e $REQUEST > response.txt)
     
@@ -226,7 +225,7 @@ main() {
 
   elif [ "$HEADER" == '' ] && [ "$Cookie" == '' ] && [ "$CSRF" == '' ] && [ "$SSL" != 'true' ]; then
     
-    REQUEST=$(curl -D headers.txt -s -k "${URL}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
+    REQUEST=$(curl -D headers.txt $1 -s -k "${URL}" -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0' --data-raw "${LOGIN/FUZZ/$wordlist}")
 
   else
 
@@ -258,8 +257,8 @@ while IFS= read -r wordlist;do
 
     # Connect to server
 
-    if [[ $VERBOSE == '-v' ]]; then
-      
+    if [[ $VERBOSE == '-v' ]] || [[ $VERBOSE == '--verbose' ]]; then
+
       main "-v"
 
     else
